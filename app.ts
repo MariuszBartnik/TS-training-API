@@ -11,6 +11,8 @@ app.use(
 		origin: true,
 	}),
 );
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use('/authors', userRoutes);
 app.use('/posts', postRoutes);
